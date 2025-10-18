@@ -1,0 +1,68 @@
+{
+    "decimal_precision": 200,
+    "thermo": {
+        "temperature": 298.15,
+	"pH": 1
+    },
+    "species": {
+        "H2_aq": {
+            "concentration": 0.0007
+        },
+        "OH:-_aq": {
+            "concentration": "10^(-14+pH)"
+        },
+        "H2O_l": {
+            "concentration": 1
+        },
+        "H3O:+_aq": {
+            "concentration": "10^(-pH)"
+        },
+        "s": {
+            "site_names": [
+                "111"
+            ],
+            "total": 1
+        }
+    },
+    "reactions": [
+	"H3O:+_aq + * + ele -> H* +H2O_l; dGa = 0.0591*U^2+0.5438*U+0.8846; dGr =0.0118*U^2+0.8466*U+0.6246",
+	"H3O:+_aq + H* + ele -> H2_aq + * + H2O_l; dGa = -0.1901*U^2 + 0.1308*U + 0.2508; dGr = -0.0391*U^2+ 0.8181*U -1.2558",
+	"H2O_l + * + ele -> H* + OH:-_aq; dGa = -0.0471*U^2+0.7342*U+2.2125; dGr = -0.0858*U^2+0.9401*U+2.0044",
+	"H2O_l + H* + ele -> H2_aq + * + OH:-_aq; dGa = 0.0491*U^2+0.5883*U+1.0554; dGr = -0.0268*U^2+0.8219*U+0.0141",
+	"2H* -> H2_aq + 2*; dGa = -0.0758*U^2-0.0853*U+0.4384; dGr = -0.0091*U^2-0.0148*U-1.8377"
+    ],
+    "default_thermo": {
+        "gas": "ideal_gas",
+        "adsorbate": "harmonic_adsorbate"
+    },
+    "mapper": {
+        "class": "Mapper1D",
+        "descriptors": {
+            "voltage": [
+                [
+                    -1.8,
+                    0,
+                    181
+                ]
+            ]
+        }
+    },
+    "parser": {
+        "class": "NullParser"
+    },
+    "scaler": {
+        "class": "Scaler"
+    },
+    "solver": {
+        "class": "SteadyStateSolver",
+        "tolerance": 1e-120,
+        "max_iterations": 1000
+    },
+    "guesser": {
+        "class": "NullGuesser"
+    },
+	"writer": {
+		"class": "CSV1DWriter",
+		"output_file": "output.csv"
+	}
+}
