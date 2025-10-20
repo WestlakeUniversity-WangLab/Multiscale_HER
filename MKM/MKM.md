@@ -56,7 +56,7 @@ All example input files are provided for pH = 1 conditions:
 
 ## Technical Details
 
-- **Convergence**: Local concentration of all species change < 1%
+- **Convergence**: Local concentration of all species change < 0.1%
 
 - **Strategy**: Relaxation iteration for numerical stability
 
