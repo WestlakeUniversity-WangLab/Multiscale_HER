@@ -35,7 +35,8 @@ The parameter can be seen in file "para_pH_1.txt".
 
 ### 3.Import variables
 
-<img width="2000" height="979" alt="图片6" src="https://github.com/user-attachments/assets/6602647d-5c12-42bf-a808-9bfc4b73febf" />
+![图片61](https://github.com/user-attachments/assets/aaeb3c96-db10-489c-8741-3abedcb8f559)
+
 
 ### 4.Build geometry
 
